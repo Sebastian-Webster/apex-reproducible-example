@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    </head>
+    <body>
+        <div id="chart"></div>
+
+        <script>
+            const options = {
+                series: [{
+                    name: 'Data',
+                    data: [1, 2]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 250
+                },
+                xaxis: {
+                    categories: ['One', 'Two']
+                },
+                theme: {
+                    mode: 'light'
+                }
+            }
+
+            const chartDiv = document.getElementById('chart')
+            const chart = new ApexCharts(chartDiv, options)
+            chart.render()
+
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black'
+                options.theme.mode = 'dark'
+                chart.updateOptions(options)
+            }, 2000)
+        </script>
+    </body>
+</html>
