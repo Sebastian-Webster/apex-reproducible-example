@@ -1,0 +1,1 @@
+Changing a chart from light mode to dark mode works (as shown in works.html), but changing a chart from dark mode to light mode does not work (as shown in not-working.html)
